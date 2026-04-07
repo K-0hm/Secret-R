@@ -5,6 +5,9 @@ import soundfile as sf
 from pyannote.audio import Model, Inference
 from scipy.spatial.distance import cdist
 
+input_file1="../Voice_Sample/noe.wav"
+input_file2="../Voice_Sample/mathurin.wav"
+
 # --- 1) Load pretrained embedding model ---
 model = Model.from_pretrained(
     "pyannote/embedding",
@@ -24,8 +27,8 @@ def load_audio(path):
     return {"waveform": waveform, "sample_rate": sample_rate}
 
 # --- 4) Load audio files ---
-audio1 = load_audio("timothee.wav")
-audio2 = load_audio("cedric.wav")
+audio1 = load_audio(input_file1)
+audio2 = load_audio(input_file2)
 
 # --- 5) Run inference (returns NumPy array directly) ---
 emb1_np = inference(audio1)

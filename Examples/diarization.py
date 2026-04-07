@@ -3,6 +3,8 @@ import torch
 import soundfile as sf
 from pyannote.audio import Pipeline
 
+input_file="../Recordings/cedric.wav"
+
 # --- 1) Load pretrained diarization pipeline ---
 pipeline = Pipeline.from_pretrained(
     "pyannote/speaker-diarization-3.1",
@@ -26,7 +28,7 @@ def load_audio(path):
     return {"waveform": waveform, "sample_rate": sample_rate}
 
 # --- 4) Load audio file ---
-audio = load_audio("cedric.wav")
+audio = load_audio(input_file)
 
 # --- 5) Run diarization ---
 result = pipeline(audio)

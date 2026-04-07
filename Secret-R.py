@@ -6,7 +6,7 @@ from pyannote.audio import Pipeline
 import tempfile
 
 output_file = "diarization.txt"
-input_file="cedric.wav"
+input_file="Recordings/cedric.wav"
 
 # --- Load pretrained diarization pipeline ---
 print("\nLoading diarization pipeline\n")
