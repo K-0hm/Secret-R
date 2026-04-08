@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 #"/home/Robotech/Réunion/Réunion_1/jerem.wav"
 
 import torch
 import soundfile as sf
 from pyannote.audio import Model, Inference
 from scipy.spatial.distance import cdist
+
 
 input_file1="../Voice_Sample/noe.wav"
 input_file2="../Voice_Sample/mathurin.wav"
